@@ -6,6 +6,29 @@ var input = [
     ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
 ]
 
-for(var i = 0 ; i <= input.length ; i++){
-    
+
+
+for(var i = 0 ; i <= input.length-1 ; i++){
+    for(var j = 0 ; j <= input[i].length-1 ; j++){
+        var data = '';
+        if (j === 0){
+            data = 'ID: ';
+            console.log(data + input[i][j]);
+        }
+        else if(j === 1){
+            data = 'Nama lengkap: ';
+            console.log(data + input[i][j]);
+        }
+        else if(j === 2){
+            data = 'TTL: ' + input[i][j] + ' ';
+            console.log(data + input[i][j+1]);
+        }
+        else if(j === 4){
+            data = 'Hobi: ';
+            console.log(data + input[i][j]);
+        }
+        
+    }
+    data = '';
+    console.log('\n');
 }
