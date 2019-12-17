@@ -1,4 +1,4 @@
-//contoh input
+//contoh inputnya
 var input = [
     ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
     ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
