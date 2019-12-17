@@ -20,8 +20,8 @@ for(var i = 0 ; i <= input.length-1 ; i++){
             console.log(data + input[i][j]);
         }
         else if(j === 2){
-            data = 'TTL: ' + input[i][j] + ' ';
-            console.log(data + input[i][j+1]);
+            data = 'TTL: ' + input[i][j] + ' ' + input[i][j+1];
+            console.log(data);
         }
         else if(j === 4){
             data = 'Hobi: ';
