@@ -30,5 +30,5 @@ for(var i = 0 ; i <= input.length-1 ; i++){
         
     }
     data = '';
-    console.log('\n');
+    console.log('');
 }
