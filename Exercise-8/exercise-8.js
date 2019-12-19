@@ -1,11 +1,30 @@
 function pasanganTerbesar(num) {
-    num.toString;
-    for(var i = 0 ; i <= num.length -2 ; i ++){
-        for(var j = 0 ; j <= num.length - 1 ; i ++){
-            if(Number(num[i] + num[i + 1]) > Number(num[j] + num[j+1])){
-                return //belum selesai ini bro
+
+    var numString = num.toString();
+    var number1 = 0;
+    var number2 = 0;
+    var salah = '';
+    for(var i = 0 ; i <= numString.length - 2 ; i ++){
+        salah = '';
+        number1 = Number(numString[i] + numString[i + 1]);
+            for(var j = i ; j <= numString.length - i - 2 ; j++){
+                number2 = Number(numString[j] + numString[j + 1]);
+                if(number1 >= number2){
+                    salah += '';
+                }
+                else{
+                    salah += 'salah';
+                }
+
             }
+        if(salah === ''){
+            return number1;
         }
+        else{
+            salah = '';
+        }
+        
+
     }
 
 
