@@ -1,6 +1,6 @@
 function pasanganTerbesar(num) {
 
-    var numString = num.toString().split('');
+    var numString = num.toString();
     var number = [];
     for(var i = 0 ; i < numString.length - 1 ; i++){
         number[i] = Number(numString[i] + numString[i+1]);
