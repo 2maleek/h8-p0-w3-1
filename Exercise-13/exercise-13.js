@@ -1,37 +1,20 @@
 function targetTerdekat(arr) {
-    var jarak = 0;
-    var jarakO = 0;
-    for(var i = 0 ; i < arr.length ; i ++){
-        if(arr[i] === 'o'){
-            jarak = 0;
-        }else if(arr[i] === 'x'){
-            jarak ++;
-            return jarak;
-        }
-        else{
-            jarak++;
-        }
-    }
-
+    
+    var o = [];
+    var x = [];
     for(var i = 0 ; i < arr.length ; i ++){
         if(arr[i] === 'x'){
-            jarakO = 0;
+            x.push(i);
         }else if(arr[i] === 'o'){
-            jarakO ++;
-            return jarak0;
-        }
-        else{
-            jarakO++;
+            o.push(i);
         }
     }
-
-    if(jarak <= jarakO){
-        return jarak;
+    if(x.length === 0){
+        return 0;
+    }else {
+        console.log(o);
+        console.log(x);
     }
-    else{
-        return jarakO;
-    }
-
 }
 
 // TEST CASES
