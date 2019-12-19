@@ -3,9 +3,8 @@ function pasanganTerbesar(num) {
     var numString = num.toString();
     var number1 = 0;
     var number2 = 0;
-    var salah = '';
     for(var i = 0 ; i <= numString.length - 2 ; i ++){
-        salah = '';
+        var salah = '';
         number1 = Number(numString[i] + numString[i + 1]);
             for(var j = i ; j <= numString.length - i - 2 ; j++){
                 number2 = Number(numString[j] + numString[j + 1]);
