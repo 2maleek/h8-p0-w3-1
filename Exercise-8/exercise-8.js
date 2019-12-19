@@ -1,30 +1,17 @@
 function pasanganTerbesar(num) {
 
-    var numString = num.toString();
-    var number1 = 0;
-    var number2 = 0;
-    for(var i = 0 ; i <= numString.length - 2 ; i ++){
-        var salah = '';
-        number1 = Number(numString[i] + numString[i + 1]);
-            for(var j = i ; j <= numString.length - i - 2 ; j++){
-                number2 = Number(numString[j] + numString[j + 1]);
-                if(number1 >= number2){
-                    salah += '';
-                }
-                else{
-                    salah += 'salah';
-                }
-
-            }
-        if(salah === ''){
-            return number1;
-        }
-        else{
-            salah = '';
-        }
-        
-
+    var numString = num.toString().split('');
+    var number = [];
+    for(var i = 0 ; i < numString.length - 1 ; i++){
+        number[i] = Number(numString[i] + numString[i+1]);
     }
+    var terbesar = number[0];
+    for(var j = 1 ; j < number.length ; j++){
+        if(number[j] > terbesar){
+            terbesar = number[j];
+        }
+    }
+    return terbesar;
 
 
   }
