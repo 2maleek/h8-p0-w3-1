@@ -1,13 +1,19 @@
 function angkaPalindrome(num) {
-    
+  
     //STRING SEMUA BROO
-    do{
-        numString = num.toString();
-        var numBalik = numString.split('').reverse().join('');
-        num ++;
-    }while(numString === numBalik);
+  
+  do {
+    num ++
+    numString = num.toString();
+    var numBalik = '';
+    for(var i = numString.length - 1 ; i >= 0 ; i--){
+      numBalik += numString[i];
+    }
+  }while (numString != numBalik);
+  return numString;
+
+
   }
-  return num;
 
   // TEST CASES
   console.log(angkaPalindrome(8)); // 9
@@ -16,11 +22,3 @@ function angkaPalindrome(num) {
   console.log(angkaPalindrome(175)); // 181
   console.log(angkaPalindrome(1000)); // 1001
 
-  /* 
-num di masukin
-num ubah jadi string
-num dibalik
-kalo salah, num ditambah 1, balik lagi ke nomor 1
-kalo bener return num
-  
-  */
