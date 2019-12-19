@@ -4,7 +4,7 @@ function angkaPalindrome(num) {
   
   do {
     num ++
-    numString = num.toString();
+    var numString = num.toString();
     var numBalik = '';
     for(var i = numString.length - 1 ; i >= 0 ; i--){
       numBalik += numString[i];
