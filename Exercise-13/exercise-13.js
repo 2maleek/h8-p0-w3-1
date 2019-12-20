@@ -1,5 +1,6 @@
 function targetTerdekat(arr) {
-    
+    var terdekat = 0;
+    var terbesarSementara = [];
     var o = [];
     var x = [];
     for(var i = 0 ; i < arr.length ; i ++){
@@ -12,9 +13,17 @@ function targetTerdekat(arr) {
     if(x.length === 0){
         return 0;
     }else {
-        console.log(o);
-        console.log(x);
+        
+        for(var i = 0 ; i < x.length ; i ++){
+            terbesarSementara[i] = Math.abs(x[i] - o);
+            
+        }
+        
+        return Math.min(terbesarSementara);
+    
+
     }
+    
 }
 
 // TEST CASES
