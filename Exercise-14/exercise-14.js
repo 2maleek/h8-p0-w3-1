@@ -5,12 +5,12 @@ function mengelompokkanAngka(arr) {
     var ganjil = [];
     var kelipatan = [];
     for(var i = 0 ; i < arr.length ; i ++){
-        if(arr[i] % 2 === 0){
+        if(arr[i] % 2 === 0 && arr[i] % 3 !== 0){
             genap.push(arr[i]);
         }
     }
     for(var i = 0 ; i < arr.length ; i ++){
-        if(arr[i] % 2 === 1){
+        if(arr[i] % 2 === 1 && arr[i] % 3 !== 0){
             ganjil.push(arr[i]);
         }
     }
@@ -21,9 +21,7 @@ function mengelompokkanAngka(arr) {
     }
 
 
-
-
-    return hasil;
+    return [genap , ganjil , kelipatan];
 
   }
   
