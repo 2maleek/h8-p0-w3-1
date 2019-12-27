@@ -1,7 +1,19 @@
 function groupAnimals(animals) {
   
+    var hasil = [];
     var abjad = 'abcdefghijklmnopqrstuvwxyz';
-    
+    for(var i = 0 ; i < abjad.length ; i ++){
+        var sementara = [];
+        for(var j = 0 ; j < animals.length ; j ++){
+            if(abjad[i] === animals[j][0]){
+                sementara.push(animals[j]);
+            }
+        }
+        if(sementara.length > 0){
+            hasil.push(sementara);
+        }
+    }
+    return hasil;
 
 }
 
