@@ -1,29 +1,37 @@
 function targetTerdekat(arr) {
-    var terdekat = 0;
-    var terbesarSementara = [];
-    var o = [];
-    var x = [];
+    
+    var posisiO;
+    var posisiX = [];
     for(var i = 0 ; i < arr.length ; i ++){
-        if(arr[i] === 'x'){
-            x.push(i);
-        }else if(arr[i] === 'o'){
-            o.push(i);
+        if(arr[i] === 'o'){
+            posisiO = i;
+        }
+        else if(arr[i] === 'x'){
+            posisiX.push(i);
         }
     }
-    if(x.length === 0){
-        return 0;
-    }else {
-        
-        for(var i = 0 ; i < x.length ; i ++){
-            terbesarSementara[i] = Math.abs(x[i] - o);
-            
-        }
-        
-        return Math.min(terbesarSementara);
     
+    var sementara = [];
+    for(var i = 0 ; i < posisiX.length ; i ++){
+        sementara[sementara.length] = posisiX[i] - posisiO;
+        if(sementara[i] < 0){
+            sementara[i] = sementara[i] - (sementara[i] * 2)
+        }
+    }
 
+
+
+    for(var i = 0 ; i < sementara.length ; i ++){
+        var terdekat = sementara[0];
+        if(sementara[i] < terdekat){
+            terdekat = sementara[i];
+        }
     }
-    
+    if(sementara.length === 0){
+        return 0;
+    }else{
+        return terdekat;
+    }
 }
 
 // TEST CASES
