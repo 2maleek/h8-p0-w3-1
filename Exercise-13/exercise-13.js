@@ -21,8 +21,8 @@ function targetTerdekat(arr) {
 
 
 
+    var terdekat = sementara[0];
     for(var i = 0 ; i < sementara.length ; i ++){
-        var terdekat = sementara[0];
         if(sementara[i] < terdekat){
             terdekat = sementara[i];
         }
